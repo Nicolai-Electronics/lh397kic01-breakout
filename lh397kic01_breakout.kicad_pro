@@ -513,6 +513,16 @@
         "wire_width": 6
       },
       {
+        "clearance": 0.2,
+        "name": "24V",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.5,
+        "via_drill": 0.3
+      },
+      {
         "bus_width": 12,
         "clearance": 0.127,
         "diff_pair_gap": 0.12,
@@ -522,7 +532,7 @@
         "microvia_drill": 0.1,
         "name": "DSI differential pair",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
+        "priority": 1,
         "schematic_color": "rgb(132, 0, 132)",
         "track_width": 0.09,
         "via_diameter": 0.5,
@@ -539,7 +549,7 @@
         "microvia_drill": 0.1,
         "name": "GND",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
+        "priority": 2,
         "schematic_color": "rgb(0, 0, 0)",
         "track_width": 0.25,
         "via_diameter": 0.8,
@@ -556,7 +566,7 @@
         "microvia_drill": 0.1,
         "name": "MIPI differential pair",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
+        "priority": 3,
         "schematic_color": "rgb(132, 0, 132)",
         "track_width": 0.09,
         "via_diameter": 0.35,
@@ -573,7 +583,7 @@
         "microvia_drill": 0.1,
         "name": "Power",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 3,
+        "priority": 4,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
         "via_diameter": 0.8,
@@ -588,9 +598,9 @@
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
-        "name": "SOA",
+        "name": "SAO",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 4,
+        "priority": 5,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.127,
         "via_diameter": 0.45,
@@ -607,7 +617,7 @@
         "microvia_drill": 0.1,
         "name": "USB differential pair",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 5,
+        "priority": 6,
         "schematic_color": "rgb(0, 0, 132)",
         "track_width": 0.118,
         "via_diameter": 0.5,
@@ -619,7 +629,17 @@
       "version": 4
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "+BL-LCD": [
+        "24V"
+      ],
+      "-BL-LCD": [
+        "24V"
+      ],
+      "Net-(D87-A)": [
+        "24V"
+      ]
+    },
     "netclass_patterns": [
       {
         "netclass": "DSI differential pair",
@@ -654,7 +674,7 @@
         "pattern": ".*USB[0-9]?_.*[NP]"
       },
       {
-        "netclass": "SOA",
+        "netclass": "SAO",
         "pattern": "SOA.*"
       }
     ]
